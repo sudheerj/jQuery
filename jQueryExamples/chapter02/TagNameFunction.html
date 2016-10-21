@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Get Tag Name</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+
+		var $tag = $('p')[0].tagName;
+		//'P'
+		alert($tag);
+
+		var $tag = $('.classTag1')[0].tagName;
+		//'DIV'
+		alert($tag);
+
+		var $tag = $('#idTag1')[0].tagName;
+		//'DIV'
+		alert($tag);
+
+		var $tag = $('p').get(0).tagName;
+		//'P'
+		alert($tag);
+
+		var $tag = $('.classTag1').get(0).tagName;
+		//'DIV'
+		alert($tag);
+
+		var $tag = $('#idTag1').get(0).tagName;
+		//'DIV'
+		alert($tag);
+
+	});
+
+</script>
+</head>
+
+<body>
+
+	<h1>jQuery Get Tag Name</h1>
+
+	<p>
+		This is paragrah 1
+	</p>
+
+	<div class="classTag1">
+		This is class='classTag1'
+	</div>
+
+	<div id="idTag1">
+		This is id='idTag1'
+	</div>
+
+</body>
+</html>

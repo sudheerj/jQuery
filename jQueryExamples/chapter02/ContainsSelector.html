@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery contains selector example</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+
+	<h1>jQuery contains selector example</h1>
+
+	<ul>
+		<li>
+			One
+		</li>
+		<li>
+			two
+		</li>
+		<li>
+			three
+		</li>
+		<li>
+			four
+		</li>
+		<li>
+			five
+		</li>
+	</ul>
+
+	<p>
+		This is a paragraph 1 - google.com
+	</p>
+
+	<p>
+		This is a paragraph 2 - jquery.com
+	</p>
+
+	<br/>
+	<br/>
+	<button>
+		p:contains(paragraph 1)
+	</button>
+	<button>
+		p:contains(jquery)
+	</button>
+	<button>
+		li:contains(three)
+	</button>
+
+	<script type="text/javascript">
+	$(function(){
+	$("button").click(function () {
+		var str = $(this).text();
+		$('p, li').css("border", "0px solid #000000");
+		$(str).css("border", "1px solid #ff0000");
+	});
+	});
+	</script>
+
+</body>
+</html>

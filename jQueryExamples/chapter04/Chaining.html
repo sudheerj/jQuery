@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Chaining example</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#p1").css("color", "red")
+            .slideUp(2000)
+            .slideDown(2000);
+    });
+});
+</script>
+</head>
+<body>
+
+<p id="p1">jQuery is fun!!</p>
+
+<button>Click me</button>
+</body>
+</html>

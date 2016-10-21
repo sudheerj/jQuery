@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Hello World</title>
+
+<script type="text/javascript" src="..\jquery-3.1.1.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+<!--<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>-->
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+ $("#msgid").html("This is Hello World by JQuery");
+});
+
+$(function(){
+ $("#msgid2").html("This is Hello World by JQuery Shorthand notation<BR>");
+});
+
+window.onload = function(){
+ document.getElementById('msgid3').innerHTML = "This is Hello World by JavaScript";
+};
+
+</script>
+
+This is Hello World by HTML
+
+<div id="msgid">
+</div>
+<div id="msgid2">
+</div>
+<div id="msgid3">
+</div>
+
+</body>
+</html>

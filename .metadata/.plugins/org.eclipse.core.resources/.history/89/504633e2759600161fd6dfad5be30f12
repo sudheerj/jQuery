@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>jQuery Get element with class name and id</title>
+
+<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+
+</head>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    var $element = $('.classSelector').html();
+    alert($element);
+
+    var $element = $('#idSelector').html();
+    alert($element);
+    
+    var $element = $('span').html();
+    alert($element);
+
+});
+
+</script>
+<body>
+
+<h1>jQuery Get element with class name and id</h1>
+
+	<div class="classSelector">
+		This is belong to 'div class="classSelector"'
+	</div>
+
+	<div id="idSelector">
+		This is belong to 'div id="idSelector"'
+	</div>
+	<span>This is tag selector content.</span>
+</body>
+</html>

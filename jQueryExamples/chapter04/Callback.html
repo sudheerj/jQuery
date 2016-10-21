@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Callback example</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	$("#button1").click(function(){
+        $("#p1").hide(1000);
+        alert("The paragraph1 is now hidden");
+    });
+    
+    $("#button2").click(function(){
+        $("#p2").hide("slow", function(){
+            alert("The paragraph2 is now hidden");
+        });
+    });
+    
+});
+</script>
+</head>
+<body>
+
+<button id="button1">Hide without callback</button>
+
+<p id="p1">This is a paragraph1 with little content.</p>
+
+
+<button id="button2">Hide with callback</button>
+
+<p id="p2">This is a paragraph2 with little content.</p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+	<title>Universal selector example</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+<style type="text/css">
+	div{
+		padding:8px;
+	}
+</style>
+</head>
+
+<body>
+
+<h1>jQuery universal example</h1>
+
+<div class="div-class1">
+	This is div-class1
+	<div class="div-class2">
+		This is div-class1
+	</div>
+	<div class="div-class3">
+		This is div-class3
+	</div>
+</div>
+
+<br/><br/>
+<button>*</button>
+<button>div > *</button>
+<button id="refresh">Refresh</button>
+
+<script type="text/javascript">
+    $("button").click(function () {
+       var str = $(this).text();
+       $(str).css("border", "1px solid #ff0000");
+    });
+
+    $('#refresh').click(function() {
+    	location.reload();
+    });
+
+</script>
+
+</body>
+</html>

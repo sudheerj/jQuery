@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+	<title>jQuery Descendants</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+
+	<h1>jQuery only child example</h1>
+
+	<ul>
+		<li>
+			ABC #1
+		</li>
+		<li>
+			ABC #2
+		</li>
+		<li>
+			ABC #3
+		</li>
+		<li>
+			ABC #4
+		</li>
+		<li>
+			ABC #5
+		</li>
+	</ul>
+
+	<ul>
+		<li>
+			DEF #1
+		</li>
+	</ul>
+
+	<ul>
+		<li>
+			GHI #1
+		</li>
+		<li>
+			GHI #2
+		</li>
+	</ul>
+
+	<button>
+		li:only-child
+	</button>
+
+	<script type="text/javascript">
+		$("button").click(function() {
+			var str = $(this).text();
+			$("li").css("background", "white");
+			$(str).css("background", "coral");
+		});
+	</script>
+</body>
+</html>

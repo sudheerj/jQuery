@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+	<title>jQuery Descendants</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	
+	<script>
+		$(document).ready(function() {
+			$("div p").first().css("background-color", "yellow");
+			$("div p").last().css("background-color", "yellow");
+			 $("p").eq(1).css("background-color", "yellow");
+		});
+	</script>
+</head>
+<body>
+
+	<h1>Welcome to My Homepage</h1>
+
+	<p>
+		This is the first paragraph in body.
+	</p>
+
+	<div style="border: 1px solid black;">
+		<p>
+			This is the first paragraph in a div.
+		</p>
+		<p>
+			This is the last paragraph in a div.
+		</p>
+	</div>
+	<br>
+
+	<div style="border: 1px solid black;">
+		<p>
+			This is the first paragraph in another div.
+		</p>
+		<p>
+			This is the last paragraph in another div.
+		</p>
+	</div>
+
+	<p>
+		This is the last paragraph in body.
+	</p>
+</body>
+</html>

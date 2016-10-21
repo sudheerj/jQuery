@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+	<title>jQuery Descendants</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$("h2").siblings().css({
+				"color" : "red",
+				"border" : "2px solid red"
+			});
+		});
+	</script>
+</head>
+<body class="siblings">
+
+	<div>
+		div (parent)
+		<p>
+			p
+		</p>
+		<span>span</span>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<p>
+			p
+		</p>
+	</div>
+
+</body>
+</html>

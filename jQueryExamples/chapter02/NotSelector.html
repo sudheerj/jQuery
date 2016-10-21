@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery not example</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+
+<h1>jQuery not example</h1>
+
+<ul class="class-ul">
+	<li>class-ul - #1</li>
+	<li>class-ul - #2</li>
+	<li>class-ul - #3</li>
+	<li>class-ul - #4</li>
+	<li>class-ul - #5</li>
+</ul>
+
+<ul id="id1">
+	<li>id1 - #1</li>
+</ul>
+
+<p class="class-p1">
+	class - #p1
+</p>
+
+<p class="class-p2">
+	class - #p2
+</p>
+
+<button>p:not(.class-p1)</button>
+<button>li:not(:only-child)</button>
+<button>li:not(:first-child)</button>
+
+<script type="text/javascript">
+    $("button").click(function () {
+      var str = $(this).text();
+      $("li,p").css("background", "white");
+      $(str).css("background", "coral");
+    });
+</script>
+</body>
+</html>

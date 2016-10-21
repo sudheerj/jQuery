@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+	<title>jQuery Descendants</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$("#button1").click(function() {
+				$("div").children().css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("#button2").click(function() {
+				$("div").children("p.first").css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("#button3").click(function() {
+				$("span").parents("ul").css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("#button4").click(function() {
+				$("span").parentsUntil("div").css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("#reset").click(function() {
+				location.reload();
+			});
+
+		});
+	</script>
+	<style>
+		.descendants1 * {
+			display: block;
+			border: 2px solid lightgrey;
+			color: lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+
+		.descendants2 * {
+			display: block;
+			border: 2px solid lightgrey;
+			color: lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+</head>
+<body>
+	<button id="button1">
+		Parent
+	</button>
+	<button id="button2">
+		Parents
+	</button>
+	<button id="button3">
+		Parents filter
+	</button>
+	<button id="button4">
+		ParentsUntil
+	</button>
+	<button id="reset">
+		Reset It
+	</button>
+
+	<div class="descendants1" style="width:500px;">
+		div (current element)
+		<p>
+			p (child) <span>span (grandchild)</span>
+		</p>
+		<p>
+			p (child) <span>span (grandchild)</span>
+		</p>
+	</div>
+
+	<div class="descendants2" style="width:500px;">
+		div (current element)
+		<p class="first">
+			p (child) <span>span (grandchild)</span>
+		</p>
+		<p class="second">
+			p (child) <span>span (grandchild)</span>
+		</p>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Hello World</title>
+		<script src="http://www.google.com/jsapi"></script>
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+		<!--<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>-->
+
+	</head>
+
+	<body>
+
+		<script type="text/javascript">
+			google.load("jquery", "3.1.1");
+
+			google.setOnLoadCallback(function() {
+					$(function() {
+    					$("#msgid").html("This is Hello World by JQuery");
+  					});
+			});
+
+		</script>
+
+		<div id="msgid"></div>
+		<div id="msgid1"></div>
+
+	</body>
+</html>

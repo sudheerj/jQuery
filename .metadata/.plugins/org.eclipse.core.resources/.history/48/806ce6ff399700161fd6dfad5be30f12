@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+	<title>jQuery Get Tag Name</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$("button1").click(function() {
+				$("span").parent().css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("button2").click(function() {
+				$("span").parents().css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("button3").click(function() {
+				$("span").parents("ul").css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("button4").click(function() {
+				$("span").parentsUntil("div").css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+
+		});
+	</script>
+	<style>
+		.ancestors * {
+			display: block;
+			border: 2px solid lightgrey;
+			color: lightgrey;
+			padding: 5px;
+			margin: 15px;
+		}
+	</style>
+</head>
+<body>
+	<button id="button1">
+		Parent
+	</button>
+	<button id="button2">
+		Parents
+	</button>
+	<button id="button3">
+		Parents filter
+	</button>
+	<button id="button4">
+		ParentsUntil
+	</button>
+
+	<div class="ancestors">
+		<div style="width:500px;">
+			div (great-grandparent)
+			<ul>
+				ul (grandparent)
+				<li>
+					li (direct parent) <span>span</span>
+				</li>
+			</ul>
+		</div>
+
+		<div style="width:500px;">
+			div (grandparent)
+			<p>
+				p (direct parent) <span>span</span>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

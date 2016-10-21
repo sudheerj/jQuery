@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+	<title>jQuery Show/Hide example</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+		.fadeOutbox, .fadeInbox,.fadeTogglebox, .fadeTobox {
+			float: left;
+			padding: 8px;
+			margin: 16px;
+			border: 1px solid red;
+			width: 200px;
+			height: 50px;
+			background-color: #000000;
+			color: white;
+		}
+		.clear {
+			clear: both;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<h1>jQuery fadeIn(), fadeOut() and fadeTo() example</h1>
+
+	<div class="clear">
+		
+		<h2>fadeOut() example</h2>
+
+		<div class="fadeOutbox">
+			Click me - fadeOut()
+		</div>
+
+		<div class="fadeOutbox">
+			Click me - fadeOut()
+		</div>
+	</div>
+
+	<div class="clear">
+		
+		<h2>fadeIn() example</h2>
+
+		<div class="fadeInbox">
+			Click me - fadeIn()
+		</div>
+
+		<div class="fadeInbox">
+			Click me - fadeIn()
+		</div>
+	</div>
+	
+	<div class="clear">
+		
+		<h2>fadeToggle() example</h2>
+
+		<div class="fadeTogglebox">
+			Click me - fadeToggle()
+		</div>
+
+		<div class="fadeTogglebox">
+			Click me - fadeToggle()
+		</div>
+	</div>
+
+	<div class="clear">
+		<h2>fadeTo() example</h2>
+
+		<div class="fadeTobox">
+			Click me - fadeTo()
+		</div>
+
+		<div class="fadeTobox">
+			Click me - fadeTo()
+		</div>
+	</div>
+
+	<div class="clear">
+		<button id=reset>
+			Reset
+		</button>
+	</div>
+
+	<script type="text/javascript">
+		$(".fadeOutbox").click(function() {
+			$(this).fadeOut('slow');
+		});
+
+		$(".fadeInbox").click(function() {
+			$(this).hide().fadeIn(2000);
+		});
+		
+		$(".fadeTogglebox").click(function() {
+			$(this).fadeToggle(2000);
+		});
+
+		$(".fadeTobox").click(function() {
+			$(this).fadeTo('fast', 0.2);
+		});
+
+		$("#reset").click(function() {
+			location.reload();
+		});
+	</script>
+
+</body>
+</html>

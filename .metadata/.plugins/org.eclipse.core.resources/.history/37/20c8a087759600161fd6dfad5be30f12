@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>jQuery Get element with class name and id</title>
+
+<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+
+</head>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+    var $element = $('.classABC').html();
+    alert($element);
+
+    var $element = $('#idABC').html();
+    alert($element);
+
+});
+
+</script>
+<body>
+
+<h1>jQuery Get element with class name and id</h1>
+
+	<div class="classABC">
+		This is belong to 'div class="classABC"'
+	</div>
+
+	<div id="idABC">
+		This is belong to 'div id="idABC"'
+	</div>
+
+</body>
+</html>

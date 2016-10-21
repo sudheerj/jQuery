@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+	<title>jQuery Show/Hide example</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+		p {
+			padding: 8px;
+			margin: 16px;
+			border: 1px solid blue;
+			width: 250px;
+			height: 50px;
+			background-color: #999999;
+			color: white;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<h1>jQuery show() and hide() example</h1>
+
+	<p>
+		Hello, this show() and hide() example
+	</p>
+
+	<button id="show">
+		show()
+	</button>
+	<button id="hide">
+		hide()
+	</button>
+	<button id="toggle">
+		toggle()
+	</button>
+	<button id=reset>
+		Reset
+	</button>
+
+	<script type="text/javascript">
+		$("#show").click(function() {
+			$("p").show('fast',function(){alert('show called')});
+		});
+
+		$("#hide").click(function() {
+			$("p").hide(1000,function(){alert('hide called')});
+		});
+		
+		$("#toggle").click(function() {
+			$("p").toggle(1000,function(){alert('toggle called')});
+		});
+
+		$("#reset").click(function() {
+			location.reload();
+		});
+	</script>
+
+</body>
+</html>

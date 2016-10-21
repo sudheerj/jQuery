@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+	<title>jQuery Get Tag Name</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+    $("span").parent().css({"color": "red", "border": "2px solid red"});
+});
+</script>
+</head>
+<body>
+
+<div class="ancestors">
+  <div style="width:500px;">div (great-grandparent)
+    <ul>ul (grandparent)
+      <li>li (direct parent)
+        <span>span</span>
+      </li>
+    </ul>
+  </div>
+
+  <div style="width:500px;">div (grandparent)
+    <p>p (direct parent)
+        <span>span</span>
+      </p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+	<title>jQuery Descendants</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	.siblings * {
+	display: block;
+	border: 2px solid lightgrey;
+	color: lightgrey;
+	padding: 5px;
+	margin: 15px;
+	}
+	<script>
+		$(document).ready(function() {
+			$("#button1").click(function() {
+				$("h2").siblings().css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("#button2").click(function() {
+				$("h2").siblings("p").css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("#button1").click(function() {
+				$("h2").next().css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("#button1").click(function() {
+				$("h2").nextAll().css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("#button1").click(function() {
+				$("h2").nextUntil().css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("#button1").click(function() {
+				$("h2").prev().css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("#button1").click(function() {
+				$("h2").prevAll().css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+			$("#button1").click(function() {
+				$("h2").prevUntill().css({
+					"color" : "red",
+					"border" : "2px solid red"
+				});
+			});
+		});
+	</script>
+</head>
+<body class="siblings">
+	<button id="button1">
+		Siblings
+	</button>
+	<button id="button2">
+		Siblings Filter
+	</button>
+	<button id="button3">
+		Next
+	</button>
+	<button id="button4">
+		Next All
+	</button>
+	<button id="button5">
+		Next Until
+	</button>
+	<button id="button6">
+		Prev
+	</button>
+	<button id="button7">
+		Prev All
+	</button>
+	<button id="button8">
+		Prev Until
+	</button>
+	<button id="reset">
+		Reset It
+	</button>
+	<div>
+		div (parent)
+		<p>
+			p
+		</p>
+		<span>span</span>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<p>
+			p
+		</p>
+	</div>
+
+</body>
+</html>

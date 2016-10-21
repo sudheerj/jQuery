@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+	<title>jQuery Show/Hide example</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	$(document).ready(function(){
+    $("button").click(function(){
+        $("p").hide("slow", function(){
+            alert("The paragraph is now hidden");
+        });
+    });
+    
+    $("button").click(function(){
+        $("p").hide(1000);
+        alert("The paragraph is now hidden");
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Hide</button>
+
+<p>This is a paragraph with little content.</p>
+
+</body>
+</html>

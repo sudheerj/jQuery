@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery First and Last Child Selector</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+</head>
+
+<body>
+
+	<h1>jQuery first child and last child example</h1>
+
+	<ul>
+		<li>
+			li #1
+		</li>
+		<li>
+			li #2
+		</li>
+		<li>
+			li #3
+		</li>
+		<li>
+			li #4
+		</li>
+		<li>
+			li #5
+		</li>
+	</ul>
+
+	<button>
+		li:first-child
+	</button>
+	<button>
+		li:last-child
+	</button>
+
+	<script type="text/javascript">
+		$("button").click(function() {
+			var str = $(this).text();
+			$("li").css("background", "white");
+			$(str).css("background", "coral");
+		});
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+	<title>jQuery Get element with class name and id</title>
+
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+
+		$(".p1, .p4, #div2").css("border", "2px solid red");
+
+	});
+
+</script>
+</head>
+
+
+<body>
+
+	<h1>Select mutiple elements example</h1>
+
+	<p class="p1">
+		P1
+	</p>
+	<p class="p2">
+		P2
+	</p>
+	<p class="p3">
+		P3
+	</p>
+	<p class="p4">
+		P4
+	</p>
+
+	<div id="div1">
+		DIV1
+	</div>
+	<div id="div2">
+		DI2
+	</div>
+	<div id="div3">
+		DI2
+	</div>
+	<div id="div4">
+		DI2
+	</div>
+
+</body>
+</html>

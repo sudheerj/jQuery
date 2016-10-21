@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+	<title>jQuery Descendants</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+			$("#button1").click(function() {
+				$("div p").first().css("background-color", "yellow");
+			});
+			$("#button2").click(function() {
+				$("div p").last().css("background-color", "yellow");
+			});
+			$("#button3").click(function() {
+				$("p").eq(1).css("background-color", "yellow");
+			});
+			$("#button4").click(function() {
+				$("p").not(".intro").css("background-color", "yellow");
+			});
+			$("#reset").click(function() {
+				location.reload();
+			});
+
+		});
+	</script>
+</head>
+<body>
+
+	<h1>Welcome to My Homepage</h1>
+
+	<button id="button1">
+		First
+	</button>
+	<button id="button2">
+		Last
+	</button>
+	<button id="button3">
+		Equal
+	</button>
+	<button id="button4">
+		Not
+	</button>
+	<button id="reset">
+		Reset It
+	</button>
+
+	<div style="border: 1px solid black;">
+		<p class="intro">
+			This is the first paragraph in another div.
+		</p>
+		<p class="intro">
+			This is the last paragraph in another div.
+		</p>
+	</div>
+
+	<p>
+		This is the last paragraph in body.
+	</p>
+</body>
+</html>

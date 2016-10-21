@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+	<title>jQuery Descendants</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+
+	<style type="text/css">
+  div { padding:8px 0px 8px 8px; }
+ </style>
+
+</head>
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$("form + div").css("border", "2px solid red");
+
+});
+
+</script>
+<body>
+
+<h1>jQuery adjacent sibling selector example</h1>
+
+<form>
+
+	<label>TextBox 1 (Child) : </label><input name="textbox1">
+
+	<div class="level1">
+		<label>TextBox 2 (GrandChild) : </label><input name="textbox2">
+	</div>
+
+	<div class="level1">
+	   <div class="level2">
+	    <label>TextBox 3 (Great GrandChild) : </label><input name="textbox3">
+	   </div>
+	</div>
+
+	<label>TextBox 4 (Child) : </label><input name="textbox4">
+
+</form>
+
+<div> I'm form siblings #1 - DIV</div>
+
+<p> I'm form siblings #2 - P </p>
+
+<div> I'm form siblings #3 - DIV </div>
+
+<p> I'm form siblings #4 - P </p>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery nth-child Selector</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("button").click(function() {
+			var str = $(this).text();
+			alert(str);
+			$("tr").css("background", "white");
+			$("tr" + str).css("background", "coral");
+		});
+	});
+	</script>
+</head>
+<body>
+	<h1>jQuery nth-child example</h1>
+
+	<table border=1>
+		<tr>
+			<td>Row #1</td>
+		</tr>
+		<tr>
+			<td>Row #2</td>
+		</tr>
+		<tr>
+			<td>Row #3</td>
+		</tr>
+		<tr>
+			<td>Row #4</td>
+		</tr>
+		<tr>
+			<td>Row #5</td>
+		</tr>
+		<tr>
+			<td>Row #6</td>
+		</tr>
+		<tr>
+			<td>Row #7</td>
+		</tr>
+		<tr>
+			<td>Row #8</td>
+		</tr>
+		<tr>
+			<td>Row #9</td>
+		</tr>
+		<tr>
+			<td>Row #10</td>
+		</tr>
+	</table>
+	<br/>
+
+	<button>
+		:nth-child(4)
+	</button>
+	<button>
+		:nth-child(3n)
+	</button>
+	<button>
+		:nth-child(even)
+	</button>
+	<button>
+		:nth-child(odd)
+	</button>
+
+	
+</body>
+</html>

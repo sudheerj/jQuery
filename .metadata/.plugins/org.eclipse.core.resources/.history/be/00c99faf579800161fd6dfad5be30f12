@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Query resize() example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+
+		<style type="text/css">
+			#singleClick, #doubleClick {
+				float: left;
+				padding: 8px;
+				margin: 16px;
+				border: 1px solid blue;
+				width: 150px;
+				height: 150px;
+				background-color: #999966;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<h1>jQuery click() and dblclick() example</h1>
+
+		<div id="singleClick">
+			Single Click Me
+		</div>
+
+		<div id="doubleClick">
+			Double Clicks Me
+		</div>
+
+		<script type="text/javascript">
+			$('#singleClick').click(function() {
+				$('#singleClick').slideUp();
+			});
+
+			$('#doubleClick').dblclick(function() {
+				$('#doubleClick').fadeOut();
+			});
+
+		</script>
+
+	</body>
+</html>

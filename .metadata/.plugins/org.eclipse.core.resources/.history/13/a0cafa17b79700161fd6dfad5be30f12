@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Animate</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+		</head>
+
+<body>
+
+<h1>jQuery select a radio button example</h1>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+
+    $("#isSelect").click(function () {
+
+	alert($('input:radio[name=sex]:checked').val());
+
+    });
+
+    $("#selectMale").click(function () {
+
+	$('input:radio[name=sex]:nth(0)').attr('checked',true);
+	//$('input:radio[name=sex]')[0].checked = true;
+
+    });
+
+    $("#selectFemale").click(function () {
+
+	$('input:radio[name=sex]:nth(1)').attr('checked',true);
+	//$('input:radio[name=sex]')[1].checked = true;
+
+    });
+
+    $("#selectUnknown").click(function () {
+
+	$('input:radio[name=sex]:nth(2)').attr('checked',true);
+	//$('input:radio[name=sex]')[2].checked = true;
+
+    });
+
+    $("#reset").click(function () {
+
+	$('input:radio[name=sex]').attr('checked',false);
+
+    });
+
+  });
+</script>
+</head><body>
+
+<input type="radio" name="sex" value="Male">Male</input>
+<input type="radio" name="sex" value="Female">Female</input>
+<input type="radio" name="sex" value="Unknown">Unknown</input>
+
+<br/>
+<br/>
+<br/>
+
+<input type='button' value='Display Selected' id='isSelect'>
+<input type='button' value='Select Male' id='selectMale'>
+<input type='button' value='Select Female' id='selectFemale'>
+<input type='button' value='Select Unknown' id='selectUnknown'>
+<input type='button' value='Reset' id='reset'>
+
+</body>
+</html>

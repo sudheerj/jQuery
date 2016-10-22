@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery form selector example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+
+		<style type="text/css">
+			#browserInfo {
+				padding: 8px;
+				border: 1px solid blue;
+				width: 300px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<h1>jQuery resize() example</h1>
+
+		</div><h2>Try resize this browser</h2>
+
+		<div id="browserInfo"></div>
+
+		<script type="text/javascript">
+			$('#browserInfo').text('Browser (Width : ' + $(window).width() + ' , Height :' + $(window).height() + ' )');
+
+			$(window).resize(function() {
+				$('#browserInfo').text('Browser (Width : ' + $(window).width() + ' , Height :' + $(window).height() + ' )');
+			});
+
+		</script>
+	</body>
+</html>

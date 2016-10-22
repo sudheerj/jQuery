@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery get textbox value example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	</head>
+
+	<body>
+
+		<h1>jQuery get textbox value example</h1>
+
+		<h2>TextBox value : <label id="msg"></label></h2>
+
+		<div style="padding:16px;">
+			TextBox :
+			<input type="text" value="Type something">
+			</input>
+		</div>
+
+		<button id="Get">
+			Get TextBox Value
+		</button>
+		<button id="Set">
+			Set To "ABC"
+		</button>
+		<button id="Reset">
+			Reset It
+		</button>
+
+		<script type="text/javascript">
+			$("#Get").click(function() {
+
+				$('#msg').html($('input:text').val());
+
+			});
+
+			$("#Reset").click(function() {
+
+				$('#msg').html("");
+				$('input:text').val("");
+
+			});
+
+			$("#Set").click(function() {
+
+				$('input:text').val("ABC");
+				$('#msg').html($('input:text').val());
+
+			});
+
+		</script>
+
+	</body>
+</html>

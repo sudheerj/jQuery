@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Query resize() example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+
+		<style type="text/css">
+	#bigbigbox{
+		margin:16px 16px 16px 48px;
+		border:1px groove blue;
+		background-color : #BBBBBB;
+		width:300px;
+		height:200px;
+	}
+	#msg{
+		color:#800000;
+	}
+</style>
+
+</head>
+<body>
+  <h1>jQuery mousemove example</h1>
+
+  <div id="bigbigbox"></div>
+
+  <p id="msg"></p>
+
+<script type="text/javascript">
+
+var i=0;
+$('#bigbigbox').mousemove(function(event) {
+  var msg = 'mousemove() position - x : ' + event.pageX + ', y : '
+                + event.pageY + ' [counter] : ' + i++;
+  $('#msg').text(msg);
+});
+
+</script>
+</body>
+</html>

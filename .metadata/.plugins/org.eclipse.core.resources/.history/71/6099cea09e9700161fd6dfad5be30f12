@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Animate</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	<script>
+$(document).ready(function(){
+	 $("#button1").click(function(){
+        $("#div1").animate({
+            left: '250px',
+            height: '+=150px',
+            width: '+=150px'
+        });
+    });
+    
+    $("#button2").click(function(){
+        var div = $("#div2");
+        div.animate({height: '300px', opacity: '0.4'}, "slow");
+        div.animate({width: '300px', opacity: '0.8'}, "slow");
+        div.animate({height: '100px', opacity: '0.4'}, "slow");
+        div.animate({width: '100px', opacity: '0.8'}, "slow");
+    });
+});
+</script>
+</head>
+<body>
+
+<button id="button1">Start Animation1</button>
+<button id="button2">Start Animation2</button>
+
+<div id="div1" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+<div id="div2" style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+</body>
+</html>

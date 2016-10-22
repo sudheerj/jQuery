@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Query resize() example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+
+		<style type="text/css">
+			span {
+				padding: 8px;
+				margin: 8px;
+				color: blue;
+			}
+			div {
+				padding: 8px;
+				margin: 8px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<h1>jQuery keyup(), keydown() and keypress() example</h1>
+
+		<label>TextBox : </label>
+		<input id="textbox" type="text" size="50" />
+
+		<div>
+			<label>1. keyup() Message :</label><span id="msg-keyup"></span>
+		</div>
+
+		<div>
+			<label>2. keydown() Message :</label><span id="msg-keydown"></span>
+		</div>
+
+		<div>
+			<label>3. keypress() Message :</label><span id="msg-keypress"></span>
+		</div>
+
+		<script type="text/javascript">
+			$('#textbox').keyup(function(event) {
+				$('#msg-keyup').html('keyup() is triggered!, keyCode = ' + event.keyCode + ' which = ' + event.which)
+			});
+
+			$('#textbox').keydown(function(event) {
+				$('#msg-keydown').html('keydown() is triggered!, keyCode = ' + event.keyCode + ' which = ' + event.which)
+			});
+
+			$('#textbox').keypress(function(event) {
+				$('#msg-keypress').html('keypress() is triggered!, keyCode = ' + event.keyCode + ' which = ' + event.which)
+			});
+
+		</script>
+	</body>
+</html>

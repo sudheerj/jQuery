@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Animate</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+	.innerBox{
+		padding:8px;
+		border:1px solid blue;
+		margin:8px;
+	}
+	.wrapBox{
+		padding:8px;
+		border:1px solid red;
+		margin:8px;
+	}
+</style>
+
+</head>
+<body>
+  <h1>jQuery wrap() example</h1>
+
+  <div class="innerBox">Ip man vs Iron man</div>
+
+  <div class="innerBox">Ip man 2 vs Iron man 2</div>
+
+  <p>
+  <button id="wrapButton">wrap()</button>
+  <button id="reset">reset</button>
+  </p>
+
+<script type="text/javascript">
+
+    $("#wrapButton").click(function () {
+
+	  $('.innerBox').wrap("<div class='wrapBox'></div>");
+
+    });
+
+	$("#reset").click(function () {
+	  location.reload();
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Animate</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+  .highlight {
+  	background:blue;
+  }
+ </style>
+<script type="text/javascript" src="jquery-1.3.2.min.js"></script>
+</head>
+<body>
+  <h1>jQuery toggleClass example</h1>
+
+  <p>This is paragraph1</p>
+  <p id="para2">This is paragraph2 (toggleClass effect)</p>
+  <p>This is paragraph3</p>
+  <p id="para4">This is paragraph4 (add/remove effect)</p>
+
+  <button id="toggleClass">toggle class</button>
+  <button id="addremoveClass">Add/Remove class</button>
+
+<script type="text/javascript">
+
+    $("#toggleClass").click(function () {
+
+	  $('#para2').toggleClass('highlight');
+
+    });
+
+    $("#addremoveClass").click(function () {
+
+	  if ($('#para4').is('.highlight')) {
+
+	      $('#para4').removeClass('highlight');
+
+	  }
+	  else{
+
+	      $('#para4').addClass('highlight');
+
+	  }
+
+    });
+
+</script>
+</body>
+</html>

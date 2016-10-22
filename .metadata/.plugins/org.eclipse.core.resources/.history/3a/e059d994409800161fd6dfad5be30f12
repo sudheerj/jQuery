@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery form selector example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("button").click(function() {
+					$.get("ajax/demo_test.txt", function(data, status) {
+						alert("Data: " + data + "\nStatus: " + status);
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+
+		<button>
+			Send an HTTP GET request to a page and get the result back
+		</button>
+
+	</body>
+</html>

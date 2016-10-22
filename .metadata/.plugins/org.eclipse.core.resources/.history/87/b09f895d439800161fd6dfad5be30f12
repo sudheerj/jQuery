@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery form selector example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+		</head>
+
+<body>
+
+<h1>jQuery trigger() example</h1>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+
+    $("#button1").bind("click", (function () {
+
+	alert("Button 1 is clicked!");
+
+    }));
+
+    $("#button2").bind("click", (function () {
+
+	alert("Button 2 is clicked!");
+
+	$("#button1").trigger("click");
+
+    }));
+
+  });
+</script>
+</head><body>
+
+<input type='button' value='Button 1' id='button1'>
+<input type='button' value='Button 2' id='button2'>
+
+</body>
+</html>

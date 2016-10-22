@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Query resize() example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+
+		<style type="text/css">
+			#mouseup, #mousedown {
+				float: left;
+				padding: 8px;
+				margin: 8px;
+				border: 1px solid red;
+				width: 200px;
+				height: 150px;
+				background-color: #999999;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<h1>jQuery mouseup() and mousedown() examples</h1>
+
+		<div id="mouseup">
+			<h2>mouseup</h2>
+			Fire when mouse over this element and released the mouse button.
+		</div>
+
+		<div id="mousedown">
+			<h2>mousedown</h2>
+			Fire when mouse over this element and pressed on the mouse button.
+		</div>
+
+		<script type="text/javascript">
+			$('#mouseup').mouseup(function() {
+				$('#mouseup').slideUp();
+			});
+
+			$('#mousedown').mousedown(function() {
+				$('#mousedown').fadeOut();
+			});
+
+		</script>
+
+	</body>
+</html>

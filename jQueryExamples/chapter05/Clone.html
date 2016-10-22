@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Animate</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+		<style type="text/css">
+			.smallBox {
+				padding: 8px;
+				border: 1px solid blue;
+				margin: 8px;
+			}
+			.smallInnerBox {
+				padding: 8px;
+				border: 1px solid green;
+				margin: 8px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<h1>jQuery clone() example</h1>
+
+		<div class="smallBox">
+			I'm a small box
+			<div class="smallInnerBox">
+				I'm a small small inner box
+			</div>
+		</div>
+
+		<p>
+			<button id="cloneButton1">
+				clone()
+			</button>
+			<button id="cloneButton2">
+				clone() button (default)
+			</button>
+			<button id="cloneButton3">
+				clone(true) button
+			</button>
+			<button id="reset">
+				reset
+			</button>
+		</p>
+
+		<script type="text/javascript">
+			$("#reset").click(function() {
+				location.reload();
+			});
+
+			$("#cloneButton1").click(function() {
+
+				$('.smallBox').clone().insertAfter(".smallBox");
+
+			});
+
+			$("#cloneButton2").click(function() {
+
+				$('#cloneButton1').clone(false).insertAfter("#cloneButton1");
+
+			});
+
+			$("#cloneButton3").click(function() {
+
+				$('#cloneButton1').clone(true).insertAfter("#cloneButton1");
+
+			});
+
+		</script>
+	</body>
+</html>

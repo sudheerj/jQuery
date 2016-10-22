@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery form selector example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+		<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.post("demo_test_post.asp",
+        {
+          name: "Donald Duck",
+          city: "Duckburg"
+        },
+        function(data,status){
+            alert("Data: " + data + "\nStatus: " + status);
+        });
+    });
+});
+</script>
+</head>
+<body>
+
+<button>Send an HTTP POST request to a page and get the result back</button>
+
+	</body>
+</html>

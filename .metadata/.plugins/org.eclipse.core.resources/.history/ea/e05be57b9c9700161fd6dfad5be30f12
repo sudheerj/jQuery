@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Animate</title>
+	<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+	.prettyBox{
+		padding:8px;
+		background: grey;
+		margin-bottom:8px;
+		width:300px;
+		height:100px;
+	}
+	.newPrettybox{
+		padding:8px;
+		background: red;
+		margin-bottom:8px;
+		width:200px;
+		height:50px;
+	}
+</style>
+
+</head>
+<body>
+  <h1>jQuery before() and insertBefore() example</h1>
+
+  <div class="prettyBox">Ip man</div>
+
+  <div class="prettyBox">Ip man 2</div>
+
+  <p>
+  <button id="before">before()</button>
+  <button id="insertBefore">insertBefore()</button>
+  <button id="reset">reset</button>
+  </p>
+
+<script type="text/javascript">
+
+    $("#before").click(function () {
+
+	  $('.prettyBox').before("<div class='newPrettybox'>Iron man</div>");
+
+    });
+
+	$("#insertBefore").click(function () {
+
+	  $("<div class='newPrettybox'>Iron man</div>").insertBefore('.prettyBox');
+
+    });
+
+	$("#reset").click(function () {
+	  location.reload();
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery EnterKey example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	</head>
+	<body>
+		<h1>Check if "enter" is pressed with jQuery</h1>
+
+		<label>TextBox : </label>
+		<input id="textbox" type="text" size="50" />
+
+		<script type="text/javascript">
+			$('#textbox').keypress(function(event) {
+
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if (keycode == '13') {
+					alert('You pressed a "enter" key in textbox');
+				}
+				event.stopPropagation();
+			});
+
+			$(document).keypress(function(event) {
+
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if (keycode == '13') {
+					alert('You pressed a "enter" key in somewhere');
+				}
+
+			});
+
+		</script>
+	</body>
+</html>

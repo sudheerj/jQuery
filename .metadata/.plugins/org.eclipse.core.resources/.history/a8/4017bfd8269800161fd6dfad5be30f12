@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery form selector example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+		<style type="text/css">
+			div {
+				padding: 16px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<h1>jQuery form selector example</h1>
+
+		<h2>Message = <label id="msg"></label></h2>
+
+		<form name="testing" action="#">
+			<div>
+				TextBox :
+				<input type="textbox" value="This is message from textbox" />
+			</div>
+			<div>
+				Password :
+				<input type="password" value="This is message from password" />
+			</div>
+			<div>
+				TextArea : 				<textarea>This is message from textarea</textarea>
+			</div>
+			<div>
+				Radio :
+				<input name="sex" type="radio" value="Male" checked>
+				Male</input>
+				<input name="sex" type="radio" value="Female">
+				Female</input>
+			</div>
+			<div>
+				CheckBox :
+				<input type="checkbox" name="checkme">
+				Check Me</input>
+			</div>
+			<div>
+				File :
+				<input type="file">
+				</input>
+			</div>
+			<div>
+				Hidden :
+				<input type="hidden" value="This is message from hidden"/>
+			</div>
+			<div>
+				Country :
+				<select id="country">
+					<option value="China">China</option>
+					<option value="United State">United State</option>
+				</select>
+			</div>
+			<div>
+				<input type="submit">
+				</input>
+				<input type="reset">
+				</input>
+			</div>
+		</form>
+
+		<button id="text">
+			input:text
+		</button>
+		<button id="password">
+			input:password
+		</button>
+		<button id="textarea">
+			textarea
+		</button>
+		<button id="radio">
+			input:radio
+		</button>
+		<button id="checkbox">
+			input:checkbox
+		</button>
+		<button id="file">
+			input:file
+		</button>
+		<button id="hidden">
+			input:hidden
+		</button>
+		<button id="select">
+			select
+		</button>
+		<button id="submit">
+			input:submit
+		</button>
+		<button id="reset">
+			input:reset
+		</button>
+
+		<script type="text/javascript">
+			$("#text, #password, #hidden,#textarea, #file, #submit, #reset").click(function() {
+				var str = $(this).text();
+				$('input, textarea, select').css("background", "#ffffff");
+				$(str).css("background", "#ff0000");
+				$('#msg').html($(str).val())
+			});
+
+			$("#radio").click(function() {
+				$('input, textarea, select').css("background", "#ffffff");
+				$('#msg').html($('input:radio[name=sex]:checked').val());
+			});
+
+			$("#checkbox").click(function() {
+				var str = $(this).text();
+				$('input, textarea, select').css("background", "#ffffff");
+
+				if ($('input:checkbox[name=checkme]').is(':checked')) {
+					$('#msg').html("Checkbox is checked");
+				} else {
+					$('#msg').html("Checkbox is uncheck");
+				}
+			});
+
+			$("#select").click(function() {
+				$('input, textarea, select').css("background", "#ffffff");
+				$('#msg').html($('#country').val());
+			});
+
+		</script>
+
+	</body>
+</html>

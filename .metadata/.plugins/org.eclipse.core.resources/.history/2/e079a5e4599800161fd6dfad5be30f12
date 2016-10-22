@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Query resize() example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+
+		<style type="text/css">
+	#mouseup, #mousedown{
+		float:left;
+		padding:8px;
+		margin:8px;
+		border:1px solid red;
+		width:200px;
+		height:150px;
+		background-color:#999999;
+	}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>jQuery mouseup() and mousedown() examples</h1>
+
+<div id="mouseup">
+	<div class="ads-in-post hide_if_width_less_800">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new 728x90 - After1stH4 -->
+<ins class="adsbygoogle hide_if_width_less_800"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-2836379775501347"
+     data-ad-slot="7391621200"
+     data-ad-region="mkyongregion"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><h2>mouseup</h2>
+	 Fire when mouse over this element and released the mouse button.
+</div>
+
+<div id="mousedown">
+	<div class="ads-in-post hide_if_width_less_800">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new 728x90 - After2ndH4 -->
+<ins class="adsbygoogle hide_if_width_less_800"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-2836379775501347"
+     data-ad-slot="3642936086"
+	 data-ad-region="mkyongregion"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><h2>mousedown</h2>
+	Fire when mouse over this element and pressed on the mouse button.
+</div>
+
+<script type="text/javascript">
+
+$('#mouseup').mouseup(function(){
+	$('#mouseup').slideUp();
+});
+
+$('#mousedown').mousedown(function(){
+	$('#mousedown').fadeOut();
+});
+
+</script>
+
+</body>
+</html>

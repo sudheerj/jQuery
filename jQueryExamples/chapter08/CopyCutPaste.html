@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery EnterKey example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+		<style type="text/css">
+			span {
+				color: blue;
+			}
+		</style>
+
+	</head>
+	<body>
+		<h1>jQuery copy, paste and cut example</h1>
+		<form action="#">
+			<label>TextBox : </label>
+			<input id="textA" type="text" size="50"
+			value="Copy, paste or cut message here" />
+		</form>
+
+		<span></span>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				$("#textA").bind({
+					copy : function() {
+						$('span').text('copy behaviour detected!');
+					},
+					paste : function() {
+						$('span').text('paste behaviour detected!');
+					},
+					cut : function() {
+						$('span').text('cut behaviour detected!');
+					}
+				});
+
+			});
+		</script>
+	</body>
+</html>

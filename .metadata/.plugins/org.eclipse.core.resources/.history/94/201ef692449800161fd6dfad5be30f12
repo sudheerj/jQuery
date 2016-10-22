@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery form selector example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	
+<style type="text/css">
+	#browserInfo{
+		padding:8px;
+		border:1px solid blue;
+		width:300px;
+	}
+</style>
+
+</head>
+<body>
+  <h1>jQuery resize() example</h1>
+
+  <div class="ads-in-post hide_if_width_less_800">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- new 728x90 - After1stH4 -->
+<ins class="adsbygoogle hide_if_width_less_800"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-2836379775501347"
+     data-ad-slot="7391621200"
+     data-ad-region="mkyongregion"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div><h2>Try resize this browser</h2>
+
+  <div id="browserInfo">
+  </div>
+
+<script type="text/javascript">
+
+   $('#browserInfo').text('Browser (Width : '
+                + $(window).width() + ' , Height :' + $(window).height() + ' )');
+
+    $(window).resize(function () {
+		$('#browserInfo').text('Browser (Width : ' + $(window).width()
+                                 + ' , Height :' + $(window).height() + ' )');
+    });
+
+</script>
+</body>
+</html>

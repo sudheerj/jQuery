@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery form selector example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+		<style type="text/css">
+	.ClassA{
+		padding:8px;
+		border:1px solid blue;
+	}
+	span{
+		color:#CC6633;
+	}
+</style>
+
+</head>
+<body>
+  <h1>jQuery bind() and unbind() example</h1>
+
+  <div id="BoxId">
+	Mouseover Me, Click Me or Double Click Me
+  </div>
+  <span></span>
+  <p>
+  <button id="bindButton">bind()</button>
+  <button id="bindMessageButton">bind(message)</button>
+  <button id="unbindButton">unbind()</button>
+  </p>
+
+<script type="text/javascript">
+
+    $("#BoxId").bind("click", (function () {
+		$('span').text("Single Clicked");
+    }));
+
+    $("#BoxId").bind("dblclick", (function () {
+		$('span').text("Double Clicked");
+    }));
+
+   //Event object
+   $("#BoxId").bind("mouseover", (function (event) {
+		$('span').text('The mouse cursor is at ('
+                 + event.pageX + ', ' + event.pageY + ')');
+    }));
+
+    //Passing event data
+    $("#bindMessageButton").bind("click", (function () {
+		var name = 'Message pass by jQuery event data';
+		$("#BoxId").bind("click", {msg: name},(function (event) {
+			$('span').text("Single Clicked - " + event.data.msg);
+     }));
+    }));
+
+    $("#unbindButton").bind("click",(function () {
+		$('#BoxId').unbind("click");
+		$('#BoxId').unbind("dblclick");
+		$('#BoxId').unbind("mouseover");
+		$('span').text("");
+    }));
+
+    //added since version 1.4
+    $("#bindButton").bind("click",(function () {
+
+		$("#BoxId").bind({
+			click : function(){
+				$('span').text("Single Clicked");
+			},
+			dblclick : function(){
+				$('span').text("Double Clicked");
+			},
+			mouseover : function(event){
+				$('span').text('The mouse cursor is at ('
+                                + event.pageX + ', ' + event.pageY + ')');
+			}
+		});
+    }));
+
+</script>
+	</body>
+</html>

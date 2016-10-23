@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Refresh a Page example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+		<script>
+			
+			var jq = $.noConflict();
+			jq(document).ready(function() {
+				jq("#button2").click(function() {
+					jq("p").text("jQuery is still working!");
+				});
+			});
+			
+		</script>
+	</head>
+	<body>
+
+		<p>
+			This is a paragraph.
+		</p>
+		<button id="button1">
+			Test jQuery1
+		</button>
+		<button id="button2">
+			Test jQuery2
+		</button>
+		<button id="button3">
+			Test jQuery3
+		</button>
+		<button id="reset">
+			Reset button
+		</button>
+
+	</body>
+</html>

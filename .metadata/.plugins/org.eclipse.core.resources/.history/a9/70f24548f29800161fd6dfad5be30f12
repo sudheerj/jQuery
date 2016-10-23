@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Refresh a Page example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	</head>
+
+	<script>
+$.noConflict();
+jQuery(document).ready(function(){
+    jQuery("button").click(function(){
+        jQuery("p").text("jQuery is still working!");
+    });
+});
+</script>
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<button>Test jQuery</button>
+
+</body>
+</html>

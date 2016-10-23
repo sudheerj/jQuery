@@ -20,7 +20,9 @@
 		<script type="text/javascript">
 						$("#load").click(function(){
 			$.getScript('js-example/helloworld.js', function() {
-			$("#content").html("Javascript is loaded successful! sayHello() function is loaded!");
+			$("#content").html('
+			Javascript is loaded successful! sayHello() function is loaded!
+			');
 			});
 			});
 

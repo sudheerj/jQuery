@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery check if an element exists example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	</head>
+
+	<body>
+
+		<h1>jQuery check if an element exists</h1>
+
+		<script type="text/javascript">
+			$(document).ready(function() {
+
+				$("#buttonDiv1").click(function() {
+
+					if ($('#div1').length) {
+						alert("Div1 exists");
+					} else {
+						alert("Div1 does not exists");
+					}
+
+				});
+
+				$("#buttonDiv2").click(function() {
+
+					if ($('#div2').length) {
+						alert("Div2 exists");
+					} else {
+						alert("Div2 does not exists");
+					}
+
+				});
+
+			});
+		</script>
+		</head>
+	<body>
+
+		<div id="div1">
+			<b>This is DIV element which has an ide of "div1"</b>
+		</div>
+
+		<br/>
+		<br/>
+		<br/>
+
+		<input type='button' value='div1 exists?' id='buttonDiv1'>
+		<input type='button' value='div2 exists?' id='buttonDiv2'>
+
+	</body>
+</html>

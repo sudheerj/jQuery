@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Refresh a Page example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	<style type="text/css">
+	span{
+		padding:8px;
+		border:1px solid red;
+		color:blue;
+	}
+</style>
+
+</head>
+
+<body>
+
+<h1>Check if image is loaded jQuery</h1>
+<p>
+<img id="image1"
+src="http://static.jquery.com/files/rocker/images/logo_jquery_215x53.gif"/>
+<p>Load image from
+"http://static.jquery.com/files/rocker/images/logo_jquery_215x53.gif"</p>
+
+<span id="result1"></span>
+</p>
+
+<p>
+<img id="image2" src="xxxx.jpg"/>
+<p>Load image from "xxxx.jpg"</p>
+
+<span id="result2"></span>
+</p>
+
+<script type="text/javascript">
+
+$('#image1')
+	.load(function(){
+		$('#result1').text('Image is loaded!');
+	})
+	.error(function(){
+		$('#result1').text('Image is not loaded!');
+	});
+
+$('#image2')
+	.load(function(){
+		$('#result2').text('Image is loaded!');
+	})
+	.error(function(){
+		$('#result2').text('Image is not loaded!');
+	});
+</script>
+
+</body>
+</html>

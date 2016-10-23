@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Image load example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	</head>
+	<body>
+		<h1>Highlight table row record on hover - jQuery</h1>
+
+		<table border="1">
+			<tr>
+				<th>No</th><th>Name</th><th>Age</th><th>Salary</th>
+			</tr>
+			<tr>
+				<td>1</td><td>Yong Mook Kim</td><td>28</td><td>$100,000</td>
+			</tr>
+			<tr>
+				<td>2</td><td>Low Yin Fong</td><td>29</td><td>$90,000</td>
+			</tr>
+			<tr>
+				<td>3</td><td>Ah Pig</td><td>18</td><td>$50,000</td>
+			</tr>
+			<tr>
+				<td>4</td><td>Ah Dog</td><td>28</td><td>$40,000</td>
+			</tr>
+			<tr>
+				<td>5</td><td>Ah Cat</td><td>28</td><td>$30,000</td>
+			</tr>
+		</table>
+
+		<script type="text/javascript">
+			$("tr").not(':first').hover(function() {
+				$(this).css("background", "yellow");
+			}, function() {
+				$(this).css("background", "");
+			});
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery check if an element has a certain class example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+		<style type="text/css">
+			.redColor {
+				background: red;
+			}
+			.blueColor {
+				background: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>jQuery check if an element has a certain class</h1>
+
+		<div class="redColor">
+			This is a div tag with class name of "redColor"
+		</div>
+
+		<p>
+			<button id="isTest">
+				is('.redColor')
+			</button>
+			<button id="hasClassTest">
+				hasClass('.redColor')
+			</button>
+			<button id="reset">
+				reset
+			</button>
+		</p>
+		<script type="text/javascript">
+			$("#isTest").click(function() {
+
+				if ($('div').is('.redColor')) {
+					$('div').addClass('blueColor');
+				}
+
+			});
+
+			$("#hasClassTest").click(function() {
+
+				if ($('div').hasClass('.redColor')) {
+					$('div').addClass('blueColor');
+				}
+
+			});
+
+			$("#reset").click(function() {
+				location.reload();
+			});
+
+		</script>
+	</body>
+</html>

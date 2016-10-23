@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery check if an element exists example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+		</head>
+<body>
+  <h1>Load Javascript dynamically with jQuery</h1>
+
+<div id="content"></div>
+<br/>
+
+<button id="load">Load JavaScript</button>
+<button id="sayHello">Say Hello</button>
+
+<script type="text/javascript">
+
+$("#load").click(function(){
+  $.getScript('js-example/helloworld.js', function() {
+     $("#content").html('
+          Javascript is loaded successful! sayHello() function is loaded!
+     ');
+  });
+});
+
+$("#sayHello").click(function(){
+  sayHello();
+});
+
+</script>
+</body>
+</html>

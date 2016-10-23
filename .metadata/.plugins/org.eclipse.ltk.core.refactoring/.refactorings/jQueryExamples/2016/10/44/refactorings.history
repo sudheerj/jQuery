@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;jQueryExamples/chapter09/BindUnbind.html&apos; to &apos;TableZebraStripes.html&apos;" description="Rename resource &apos;BindUnbind.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="chapter09/BindUnbind.html" name="TableZebraStripes.html" stamp="1477195509225" updateReferences="true"/>
+</session>

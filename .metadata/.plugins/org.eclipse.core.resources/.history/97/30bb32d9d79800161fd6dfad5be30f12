@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Refresh a Page example</title>
+		<script type="text/javascript" src="..\jquery\jquery-3.1.1.min.js"></script>
+	</head>
+
+	<body>
+
+		<h1>Stop a page from exit with jQuery</h1>
+
+		<button id="reload">
+			Refresh a Page in jQuery
+		</button>
+
+		<script type="text/javascript">
+			$('#reload').click(function() {
+
+				location.reload();
+
+			});
+
+			$(window).bind('beforeunload', function() {
+				return '>>>>>Before You Go<<<<<<<< \n Your custom message go here';
+			});
+
+		</script>
+
+	</body>
+</html>
+Try Demo
